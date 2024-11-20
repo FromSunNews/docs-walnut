@@ -8,6 +8,9 @@ const meta = {
   Architecture: {
     title: "Architecture",
   },
+  Blockchain: {
+    title: "Blockchain",
+  },
   Consumer: {
     title: "Cloud Workspace",
   },

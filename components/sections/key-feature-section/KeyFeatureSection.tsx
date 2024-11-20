@@ -24,48 +24,48 @@ import BlurFade from '@/components/ui/blur-fade';
 
 const features = [
   {
-    title: "AAA Gaming On-the-Go",
+    title: "Decentralized Computing Power",
     description:
-      "Play high-end games anywhere, anytime without the need for expensive hardware.",
-    icon: <IconDeviceGamepad2 />,
-  },
-  {
-    title: "Seamless dApp Access",
-    description:
-      "Use decentralized applications effortlessly, regardless of your device's capabilities.",
-    icon: <IconApps />,
-  },
-  {
-    title: "No High-End Hardware Required",
-    description:
-      "Experience top-tier performance without investing in costly gaming rigs or powerful devices.",
-    icon: <IconDeviceLaptop />,
-  },
-  {
-    title: "Internet-Powered Gaming",
-    description: "All you need is an internet connection to dive into your favorite games and dApps.",
-    icon: <IconWorld />,
-  },
-  {
-    title: "Cross-Platform Compatibility",
-    description: "Enjoy a consistent experience across various devices and operating systems.",
-    icon: <IconDevices />,
-  },
-  {
-    title: "Cloud-Based Performance",
-    description:
-      "Leverage cloud technology for smooth, high-performance gaming and dApp usage.",
+      "Access distributed GPU and CPU resources from a global network of providers for your computational needs.",
     icon: <IconCloud />,
   },
   {
-    title: "Instant Access",
+    title: "AI & ML Optimization",
     description:
-      "No lengthy downloads or installations. Jump right into your games and dApps instantly.",
-    icon: <IconPlayerPlay />,
+      "Perfect for training AI models, machine learning tasks, and other compute-intensive operations.",
+    icon: <IconAdjustmentsBolt />,
   },
   {
-    title: "Revolutionary Gaming Experience",
-    description: "Transform the way you play and interact with blockchain applications.",
+    title: "Earn by Sharing",
+    description:
+      "Monetize your idle computing resources by sharing them with users who need additional processing power.",
+    icon: <IconCurrencyDollar />,
+  },
+  {
+    title: "Global Network",
+    description: "Connect with computing resources worldwide through our decentralized infrastructure.",
+    icon: <IconWorld />,
+  },
+  {
+    title: "Multi-Device Support",
+    description: "Access computational resources from any device, anywhere in the world.",
+    icon: <IconDevices />,
+  },
+  {
+    title: "Real-time Scaling",
+    description:
+      "Scale your computing power up or down instantly based on your project needs.",
+    icon: <IconEaseInOut />,
+  },
+  {
+    title: "Secure Processing",
+    description:
+      "Enterprise-grade security for all computational tasks with blockchain-based verification.",
+    icon: <IconTerminal2 />,
+  },
+  {
+    title: "Resource Optimization",
+    description: "Smart allocation of computing resources ensures maximum efficiency and performance.",
     icon: <IconRotate />,
   },
 ];

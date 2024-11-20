@@ -40,16 +40,16 @@ const HeroSection: React.FC = () => {
           <BlurFade delay={0.25} duration={0.75} inView>
             <WordPullUp
               className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-wider adaptive-text"
-              words="Play AAA Games & Access dApps Seamlessly on the Aptos"
+              words="Decentralized Computing Power for AI & ML"
             />
           </BlurFade>
         </div>
 
-        <div className='mb-6 '>
+        <div className='mb-6'>
           <BlurFade inView delay={0.25 * 5} yOffset={10}>
             <BoxReveal boxColor={"#3b83f62f"} duration={0.75} delay={0.25 * 5}>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-blue-400">
-                No High-End Hardware Required!
+                Share & Access GPU/CPU Resources Globally
               </h2>
             </BoxReveal>
           </BlurFade>
@@ -58,11 +58,10 @@ const HeroSection: React.FC = () => {
         <div className='mb-[-10px]'>
           <BlurFade delay={0.25 * 7} inView>
             <p className="text-xl text-adaptive-text mb-12 max-w-3xl mx-auto">
-              Revolutionize your gaming and dApp experience with WALNUT. Play AAA games and use dApps effortlessly from anywhere - all you need is an internet connection.
+              Join the future of distributed computing. Share your idle computing resources or access powerful GPU/CPU clusters for AI training, Machine Learning, and intensive computational tasks through our decentralized network.
             </p>
           </BlurFade>
         </div>
-
 
         <BlurFade delay={0.25 * 8} inView>
           <div className='flex flex-row items-center justify-center md:flex-row gap-x-6'>
@@ -72,7 +71,7 @@ const HeroSection: React.FC = () => {
               }}
               className="hover:scale-[1.15] shadow-2xl m-auto">
               <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                Get Started for Free
+                Start Computing
               </span>
             </ShimmerButton>
 
@@ -87,8 +86,8 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
         </BlurFade>
-      </div >
-    </section >
+      </div>
+    </section>
   );
 };
 

@@ -1,6 +1,6 @@
 export const APP_CONFIG = {
   name: "WALNUT",
-  description: "Cloud PC on Aptos",
+  description: "Cloud PC",
   logo: "/logo/logo.png",
   github: "https://github.com/Weminal-labs/walnut",
   discord: "",

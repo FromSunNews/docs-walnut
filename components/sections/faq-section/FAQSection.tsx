@@ -12,20 +12,28 @@ import BlurFade from '@/components/ui/blur-fade';
 
 const faqItems = [
   {
-    question: "How do I get started?",
-    answer: "To get started with WALNUT, simply sign up on our website and follow the easy setup instructions."
+    question: "How can I share my computing resources?",
+    answer: "To become a resource provider on WALNUT, simply register your node, specify your GPU/CPU specifications, and set your pricing. Our platform will automatically connect you with users who need computing power."
   },
   {
-    question: "What are the costs?",
-    answer: "We offer various pricing plans to suit different needs. Check our pricing page for detailed information."
+    question: "How do I earn rewards for sharing?",
+    answer: "Providers earn WALNUT tokens based on their resource contribution and usage time. Rewards are automatically distributed through smart contracts, with payments processed in real-time as users utilize your computing power."
   },
   {
-    question: "Is it available on mobile devices?",
-    answer: "Yes, WALNUT is accessible on mobile devices through our dedicated mobile app or web browser."
+    question: "What types of computational tasks are supported?",
+    answer: "WALNUT supports a wide range of computational tasks including AI model training, machine learning operations, data processing, and other GPU/CPU intensive workloads. Our network automatically matches tasks with appropriate resources."
   },
   {
-    question: "Is my data secure?",
-    answer: "We prioritize your data security. WALNUT uses advanced encryption and blockchain technology to ensure your information is protected."
+    question: "How is security maintained?",
+    answer: "We implement multiple security layers including blockchain verification, encrypted data transmission, and secure containerization for all computational tasks. Each process runs in isolation to ensure data privacy and system integrity."
+  },
+  {
+    question: "What are the minimum hardware requirements for providers?",
+    answer: "Resource providers should have modern GPU/CPU hardware with reliable internet connectivity. We recommend at least 16GB RAM, recent generation GPU (for GPU providers), and stable broadband connection for optimal performance."
+  },
+  {
+    question: "How is pricing determined?",
+    answer: "Pricing is market-driven, with providers setting their base rates. Our dynamic pricing algorithm adjusts rates based on demand, computational power, and network conditions to ensure fair compensation for providers and value for users."
   }
 ];
 

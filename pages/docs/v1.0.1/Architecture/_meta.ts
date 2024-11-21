@@ -3,7 +3,7 @@ const meta = {
     title: "1. Cloud Infrastructure",
   },
   "2-hybrid-infrastructure": {
-    title: "2. Hybrid Infrastructure (Coming Soon)",
+    title: "2. Hybrid Infrastructure",
   },
 };
 

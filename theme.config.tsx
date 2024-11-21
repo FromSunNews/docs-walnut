@@ -1,20 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useConfig, DocsThemeConfig } from 'nextra-theme-docs';
-import Link from 'next/link';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { useConfig, DocsThemeConfig } from "nextra-theme-docs";
+import Link from "next/link";
 import SparklesText from "@/components/ui/sparkles-text/SparklesText";
-import dynamic from 'next/dynamic';
-import { APP_CONFIG } from './config/app-config';
-import { useRouter } from 'next/router';
+import dynamic from "next/dynamic";
+import { APP_CONFIG } from "./config/app-config";
+import { useRouter } from "next/router";
+import { FC } from 'react';
 
-const DynamicThemeToggle = dynamic(() => import('components/ui/theme-toggle/ThemeToggle'), {
-  ssr: false,
-});
+// Import components
+import Notice from "./components/Notice";
+import _Image from "./components/Image";
+
+const DynamicThemeToggle = dynamic(
+  () => import("components/ui/theme-toggle/ThemeToggle"),
+  {
+    ssr: false,
+  }
+);
 
 const config: DocsThemeConfig = {
+  components: {
+    Notice,
+    Image: _Image,
+  },
   head: function useHead() {
     const config = useConfig<{ description?: string; image?: string }>();
-    const description = config.frontMatter.description || APP_CONFIG.description;
+    const description =
+      config.frontMatter.description || APP_CONFIG.description;
     const title = `${config.title} | ${APP_CONFIG.name} - ${APP_CONFIG.description}`;
     return (
       <>
@@ -23,8 +36,18 @@ const config: DocsThemeConfig = {
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
         <link rel="apple-touch-icon" sizes="180x180" href={APP_CONFIG.logo} />
-        <link rel="icon" type="image/png" sizes="32x32" href={APP_CONFIG.logo} />
-        <link rel="icon" type="image/png" sizes="16x16" href={APP_CONFIG.logo} />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={APP_CONFIG.logo}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={APP_CONFIG.logo}
+        />
       </>
     );
   },
@@ -33,11 +56,11 @@ const config: DocsThemeConfig = {
   },
   notFound: {
     content: () => <h1>Not found</h1>,
-    labels: "Not found 404"
+    labels: "Not found 404",
   },
   toc: {
     backToTop: true,
-    float: true
+    float: true,
   },
   logoLink: false,
   logo: function useRouterLogo() {
@@ -45,16 +68,20 @@ const config: DocsThemeConfig = {
     const router = useRouter();
 
     useEffect(() => {
-      const shouldRenderSelect = router.pathname.startsWith('/docs') &&
-        !router.pathname.startsWith('/docs/user-guide');
-      console.log('Current path:', router.pathname);
-      console.log('Should render select:', shouldRenderSelect);
+      const shouldRenderSelect =
+        router.pathname.startsWith("/docs") &&
+        !router.pathname.startsWith("/docs/user-guide");
+      console.log("Current path:", router.pathname);
+      console.log("Should render select:", shouldRenderSelect);
       setRenderSelect(shouldRenderSelect);
     }, [router.pathname]);
 
     return (
-      <div className='flex flex-row items-center'>
-        <Link href="/" className="hidden sm:flex items-center text-current no-underline hover:opacity-75 ltr:mr-auto rtl:ml-auto">
+      <div className="flex flex-row items-center">
+        <Link
+          href="/"
+          className="hidden sm:flex items-center text-current no-underline hover:opacity-75 ltr:mr-auto rtl:ml-auto"
+        >
           {/* <div className="flex items-center relative">
             <SparklesText
               text="WA"
@@ -75,7 +102,7 @@ const config: DocsThemeConfig = {
   darkMode: true,
   sidebar: {
     toggleButton: true,
-    defaultMenuCollapseLevel: 1
+    defaultMenuCollapseLevel: 1,
   },
   project: {
     link: APP_CONFIG.github,
@@ -91,11 +118,15 @@ const config: DocsThemeConfig = {
         <div className="mx-auto max-w-[1440px] p-6 lg:py-10">
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm sm:text-center dark:text-gray-400">
-              © {new Date().getFullYear()} {APP_CONFIG.name}.{' '}
+              © {new Date().getFullYear()} {APP_CONFIG.name}.{" "}
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               {Object.entries(APP_CONFIG.social).map(([name, url]) => (
-                <Link key={name} href={url} className="hover:text-gray-900 dark:hover:text-white ms-5">
+                <Link
+                  key={name}
+                  href={url}
+                  className="hover:text-gray-900 dark:hover:text-white ms-5"
+                >
                   <span className="sr-only">{name} page</span>
                 </Link>
               ))}

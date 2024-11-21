@@ -1,1 +1,30 @@
-# Coming soon
+{/* # Hybrid Infrastructure
+
+Sau khi đã ổn định với kiến trúc ở trên đám mây, thì chúng tôi lại hướng tới việc nâng cấp kiến trúc hạ tầng, mang nhiều tính "chia sẻ" và "phi tập trung" hợp so với hạ tầng trước đó. Với kiến trúc mới này thì chúng tôi có thể tận dùng được đa dạng các cấu hình, tài nguyên máy hơn là chỉ có một dạng như ở trên cloud trước đó vì những máy worker mà người dùng chia sẻ chính là máy vi tính cá nhân của họ.
+
+Ở hạ tầng trên đám mây trước đó thì các Nodes giao tiếp với nhau trong một mạng nội bộ riêng mà các tác nhân bên ngoài không thể truy cập vào được. Nhưng với hạ tầng này thì Worker Node đã được chuyển ra bên ngoài "internet" cho nên giao tiếp giữa Header Node và Worker Node buộc phải được mã hoá ở hai đầu, tránh các cuộc tấn công mạng nhắm tới người dùng cũng như là hệ thống.
+
+**INSERT IMAGE HERE**
+
+## Application
+
+Với ứng dụng, giờ đây không chỉ mỗi giao tiếp với **Walnut** ở trên cloud nữa, mà còn sẽ phải giao tiếp thêm với server của Worker Node được cài đặt trong máy vi tính cá nhân của người dùng cung cấp (gọi là Provider). Khi đó thì người dùng có thể "thật sự" đăng ký máy của họ như là một Worker Node lên trên hệ thống của **Walnut**.
+
+Khi đăng ký như thế thì **Walnut** sẽ có thể giao tiếp được với Worker Node thông qua một số API, và Header Node cũng không nằm ngoài khả năng đó. Header Node luôn đóng vai trò là một thực thể quản lý các Worker trong hệ thống.
+
+## Worker Node
+
+Khi có nhiều Worker, thì chính những Worker này sẽ tạo nên một mạng lưới phi tập trung trong đó có **Walnut** làm bên trung gian. Worker Node cũng có một số API mở ra để **Walnut** cũng như là Header Node có thể kiểm soát được.
+
+Và đương nhiên là Worker Node cũng không có quyền kiểm soát máy vi tính cá nhân của người dùng. Nó chỉ có nhiệm vụ là dùng tài nguyên của máy người dùng như đã cam kết, kết nối tới Header Node để chạy các tác vụ được Header Node phân phối.
+
+<Notice>
+  Worker Node sẽ không lấy hết tài nguyên của máy người dùng, mà chỉ lấy một
+  phần tài nguyên rảnh rỗi trong máy của người dùng.
+</Notice>
+
+## Security Layer
+
+## Backend */}
+
+Comming soon...

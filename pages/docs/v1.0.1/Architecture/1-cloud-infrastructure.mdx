@@ -1,1 +1,28 @@
-# Coming soon
+# Cloud Architecture
+
+At the initial stages of the project, our system successfully established a shared networking system on AWS Cloud. At this point, our infrastructure was entirely cloud-focused, effectively operating in a "simulated" manner. Despite the simulation nature of the system, it was able to produce results that aligned with our expectations and predictions.
+
+The architecture of **Walnut** comprises a private network on the cloud, which includes the **Walnut** Server, responsible for the system's operations, and an application layer that allows end-users to access services provided by **Walnut**.
+
+Thus, the architecture of **Walnut** is divided into two main parts:
+
+<Image src="/assets/docs/v1.0.1/architecture/cloud_architecture.png" />
+
+## Application
+
+Users interact directly with **Walnut** through a web interface that is clear, concise, and easy to use. This application communicates with **Walnut**'s underlying system to perform a variety of features designed to serve end-users.
+
+## Backend
+
+**Walnut**'s servers are hosted on the cloud to extend server reach and enhance the user experience when using **Walnut**'s services. **Walnut** is responsible for creating **Header Nodes** and **Worker Nodes**, as well as terminating **Worker Nodes** when they remain unused for extended periods.
+
+<Notice>
+  In hybrid infrastructure, Worker Nodes represent the user's personal computers
+  rather than virtual machines in the Cloud.
+</Notice>
+
+When a user registers a worker node, represented as a virtual machine, into the system, **Walnut** will request AWS to create a virtual machine and establish communication with it.
+
+When another end-user wants to deploy a cluster to perform a specific task, **Walnut** will check the availability of worker nodes to create a suitable cluster for the user's needs.
+
+Only **Walnut** can communicate with the Header and Worker Nodes, and the nodes on the cloud can also communicate with each other. End-users cannot access the **Header Nodes** or **Worker Nodes** directly.

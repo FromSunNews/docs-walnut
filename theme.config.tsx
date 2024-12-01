@@ -22,7 +22,7 @@ const DynamicThemeToggle = dynamic(
 
 const config: DocsThemeConfig = {
   components: {
-    Callout,
+    Callout: Callout as FC<any>,
     Notice,
     Image: _Image,
   },

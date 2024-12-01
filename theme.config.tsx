@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { FC } from 'react';
 
 // Import components
+import { Callout } from "nextra/components";
 import Notice from "./components/Notice";
 import _Image from "./components/Image";
 
@@ -21,6 +22,7 @@ const DynamicThemeToggle = dynamic(
 
 const config: DocsThemeConfig = {
   components: {
+    Callout: Callout as FC<any>,
     Notice,
     Image: _Image,
   },

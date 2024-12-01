@@ -1,30 +1,35 @@
-{/* # Hybrid Infrastructure
+# Hybrid Infrastructure
 
-Sau khi đã ổn định với kiến trúc ở trên đám mây, thì chúng tôi lại hướng tới việc nâng cấp kiến trúc hạ tầng, mang nhiều tính "chia sẻ" và "phi tập trung" hợp so với hạ tầng trước đó. Với kiến trúc mới này thì chúng tôi có thể tận dùng được đa dạng các cấu hình, tài nguyên máy hơn là chỉ có một dạng như ở trên cloud trước đó vì những máy worker mà người dùng chia sẻ chính là máy vi tính cá nhân của họ.
+After stabilizing the cloud-based architecture, we aimed to upgrade the infrastructure, introducing more "shared" and "decentralized" features compared to the previous setup. With this new architecture, we can utilize a wider variety of configurations and machine resources, as the worker machines provided by users are their personal computers.
 
-Ở hạ tầng trên đám mây trước đó thì các Nodes giao tiếp với nhau trong một mạng nội bộ riêng mà các tác nhân bên ngoài không thể truy cập vào được. Nhưng với hạ tầng này thì Worker Node đã được chuyển ra bên ngoài "internet" cho nên giao tiếp giữa Header Node và Worker Node buộc phải được mã hoá ở hai đầu, tránh các cuộc tấn công mạng nhắm tới người dùng cũng như là hệ thống.
+In the prior cloud-based infrastructure, nodes communicated within a private network inaccessible to external entities. However, in this setup, Worker Nodes are now exposed to the "internet," requiring end-to-end encryption between the Header Node and Worker Node to prevent potential cyberattacks targeting users and the system.
 
-**INSERT IMAGE HERE**
+<Image src="/assets/docs/v1.0.1/architecture/hybrid_architecture.png" />
 
 ## Application
 
-Với ứng dụng, giờ đây không chỉ mỗi giao tiếp với **Walnut** ở trên cloud nữa, mà còn sẽ phải giao tiếp thêm với server của Worker Node được cài đặt trong máy vi tính cá nhân của người dùng cung cấp (gọi là Provider). Khi đó thì người dùng có thể "thật sự" đăng ký máy của họ như là một Worker Node lên trên hệ thống của **Walnut**.
+The application no longer communicates solely with **Walnut** on the cloud but also interacts with the Worker Node server installed on the personal computers of users (referred to as Providers). This allows users to "truly" register their machines as Worker Nodes within the **Walnut** system.
 
-Khi đăng ký như thế thì **Walnut** sẽ có thể giao tiếp được với Worker Node thông qua một số API, và Header Node cũng không nằm ngoài khả năng đó. Header Node luôn đóng vai trò là một thực thể quản lý các Worker trong hệ thống.
+Once registered, **Walnut** can communicate with the Worker Node via specific APIs, as can the Header Node. The Header Node acts as a central entity managing the Workers in the system.
 
 ## Worker Node
 
-Khi có nhiều Worker, thì chính những Worker này sẽ tạo nên một mạng lưới phi tập trung trong đó có **Walnut** làm bên trung gian. Worker Node cũng có một số API mở ra để **Walnut** cũng như là Header Node có thể kiểm soát được.
+When multiple Workers are present, they form a decentralized network with **Walnut** acting as an intermediary. The Worker Node exposes APIs that **Walnut** and the Header Node can use for control.
 
-Và đương nhiên là Worker Node cũng không có quyền kiểm soát máy vi tính cá nhân của người dùng. Nó chỉ có nhiệm vụ là dùng tài nguyên của máy người dùng như đã cam kết, kết nối tới Header Node để chạy các tác vụ được Header Node phân phối.
+However, Worker Nodes do not have control over the user’s personal computer. Their sole purpose is to utilize the agreed-upon resources of the user's machine to connect to the Header Node and execute tasks distributed by it.
 
-<Notice>
-  Worker Node sẽ không lấy hết tài nguyên của máy người dùng, mà chỉ lấy một
-  phần tài nguyên rảnh rỗi trong máy của người dùng.
-</Notice>
+<Callout type="info" emoji="ℹ️">
+  Worker Nodes do not consume all of the user's machine resources. They only
+  utilize idle resources, the amount of which is negotiated between **Walnut**
+  and the user.
+</Callout>
 
 ## Security Layer
 
-## Backend */}
+Since the system is no longer entirely cloud-based and the Header Node and Worker Nodes communicate over the internet, an additional security layer is necessary to secure the communication between these nodes.
 
-Comming soon...
+Furthermore, measures must be in place to ensure the security of Worker Nodes, protecting Providers from having their systems compromised or injected with malicious code. **Walnut** also guarantees that no additional services will be installed to interfere with the user's personal computer beyond the agreed-upon tasks.
+
+## Backend
+
+The **Walnut** backend no longer has the capability to "control" Worker Nodes as it did in the prior cloud-based infrastructure. Worker Nodes are now more independent and act as intermediary servers. Communication between **Walnut**, the Header Node, Worker Nodes, and users remains unchanged but is enhanced with additional security measures.

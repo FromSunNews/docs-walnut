@@ -1,0 +1,103 @@
+import { Callout, Steps } from 'nextra/components'
+
+# Deploy Cluster
+
+This guide explains how to deploy a cluster using Walnut's decentralized computing network, enabling you to harness distributed computing power for your projects.
+
+## Overview
+
+clusters on Walnut provide powerful distributed computing capabilities through our network of high-performance GPUs and CPUs. Our streamlined deployment process ensures you can get started quickly, while our intuitive interface makes managing your cluster effortless.
+
+### Key Benefits
+- **Scalable Performance**: Easily scale your computing resources up or down
+- **Cost Effective**: Pay only for the resources you use
+- **Global Network**: Access computing power from providers worldwide
+- **High Availability**: Built-in redundancy and fault tolerance
+
+## Deployment Steps
+
+<Steps>
+### Create Cluster
+
+Begin your deployment journey by selecting **Deploy Cluster** from the dashboard. This initiates our guided deployment process, ensuring you configure your cluster optimally for your specific needs.
+
+![Create Cluster](/assets/docs/v1.0.1/consumer/2.1.png)
+
+### Select Cluster Type
+
+Choose the cluster type that best aligns with your project requirements:
+
+- **General** - Perfect for prototyping or general E2E workloads
+  - Balanced CPU/GPU allocation
+  - Flexible scaling options
+  - Ideal for development and testing
+
+- **Inference** - Optimized for production-ready inference workloads
+  - Low-latency configuration
+  - High throughput capacity
+  - Specialized for model serving
+
+- **Train** - Designed for machine learning model development
+  - High-performance GPU configurations
+  - Optimized for distributed training
+  - Enhanced storage capabilities
+
+![Select Cluster Type](/assets/docs/v1.0.1/consumer/2.2.png)
+
+### Choose Location
+
+Select your preferred GPU location to optimize performance. Our global network allows you to:
+- Choose providers closest to your location
+- Reduce latency with strategic positioning
+- Access region-specific resources
+- Comply with data residency requirements
+
+![Choose Location](/assets/docs/v1.0.1/consumer/2.3.png)
+
+### Select Cluster Processor
+
+Configure your cluster's processing capabilities based on your workload requirements:
+- Choose from various GPU models
+- Select CPU configurations
+- Determine memory allocation
+- Configure storage options
+
+![Select Cluster Processor](/assets/docs/v1.0.1/consumer/2.4.png)
+
+### Review Summary
+
+Review your cluster configuration before deployment:
+- Verify all selected options
+- Confirm pricing details
+- Check resource availability
+- Review estimated deployment time
+
+Click **Deploy Cluster** to launch your configuration.
+
+![Summary](/assets/docs/v1.0.1/consumer/2.5.png)
+
+### Check Deployment Result
+
+After configuring your cluster, you'll be presented with a detailed deployment overview:
+
+#### Cluster Configuration Result
+The system will display a comprehensive summary of your deployed Cluster
+
+![Cluster Configuration](/assets/docs/v1.0.1/consumer/2.7.png)
+
+#### Header Node Status
+You can monitor the creation and status of your header node in real-time. The header node serves as the central control point for your cluster, managing task distribution and resource allocation. Currently, this is demonstrated through AWS simulation, providing you with a preview of the deployment process.
+
+<Callout type="warning" emoji="⚠️">
+This is a simulation environment. In production, Walnut will provide executable configurations tailored to your specific environment, enabling seamless integration with your existing infrastructure.
+</Callout>
+
+![Header Node](/assets/docs/v1.0.1/consumer/2.6.png)
+
+#### Next Steps
+After successful deployment:
+- Monitor your cluster's health through the dashboard
+- Configure additional security settings if needed
+- Begin submitting tasks to your cluster
+- Scale resources based on workload demands
+</Steps>

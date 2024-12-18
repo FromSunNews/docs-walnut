@@ -1,0 +1,35 @@
+# Hybrid Infrastructure
+
+After stabilizing the cloud-based architecture, we aimed to upgrade the infrastructure, introducing more "shared" and "decentralized" features compared to the previous setup. With this new architecture, we can utilize a wider variety of configurations and machine resources, as the worker machines provided by users are their personal computers.
+
+In the prior cloud-based infrastructure, nodes communicated within a private network inaccessible to external entities. However, in this setup, Worker Nodes are now exposed to the "internet," requiring end-to-end encryption between the Header Node and Worker Node to prevent potential cyberattacks targeting users and the system.
+
+<Image src="/assets/docs/v1.0.1/architecture/hybrid_architecture.png" />
+
+## Application
+
+The application no longer communicates solely with **Walnut** on the cloud but also interacts with the Worker Node server installed on the personal computers of users (referred to as Providers). This allows users to "truly" register their machines as Worker Nodes within the **Walnut** system.
+
+Once registered, **Walnut** can communicate with the Worker Node via specific APIs, as can the Header Node. The Header Node acts as a central entity managing the Workers in the system.
+
+## Worker Node
+
+When multiple Workers are present, they form a decentralized network with **Walnut** acting as an intermediary. The Worker Node exposes APIs that **Walnut** and the Header Node can use for control.
+
+However, Worker Nodes do not have control over the user’s personal computer. Their sole purpose is to utilize the agreed-upon resources of the user's machine to connect to the Header Node and execute tasks distributed by it.
+
+<Callout type="info" emoji="ℹ️">
+  Worker Nodes do not consume all of the user's machine resources. They only
+  utilize idle resources, the amount of which is negotiated between **Walnut**
+  and the user.
+</Callout>
+
+## Security Layer
+
+Since the system is no longer entirely cloud-based and the Header Node and Worker Nodes communicate over the internet, an additional security layer is necessary to secure the communication between these nodes.
+
+Furthermore, measures must be in place to ensure the security of Worker Nodes, protecting Providers from having their systems compromised or injected with malicious code. **Walnut** also guarantees that no additional services will be installed to interfere with the user's personal computer beyond the agreed-upon tasks.
+
+## Backend
+
+The **Walnut** backend no longer has the capability to "control" Worker Nodes as it did in the prior cloud-based infrastructure. Worker Nodes are now more independent and act as intermediary servers. Communication between **Walnut**, the Header Node, Worker Nodes, and users remains unchanged but is enhanced with additional security measures.

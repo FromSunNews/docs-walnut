@@ -1,16 +1,16 @@
 const meta = {
-  index: {
-    type: "page",
-    title: "About WALNUT",
-    theme: {
-      layout: "raw",
-    },
-  },
-  "user-guide": {
-    type: "page",
-    title: "User Guide",
-    display: "hidden",
-  },
+  // index: {
+  //   type: "page",
+  //   title: "About WALNUT",
+  //   theme: {
+  //     layout: "raw",
+  //   },
+  // },
+  // "user-guide": {
+  //   type: "page",
+  //   title: "User Guide",
+  //   display: "hidden",
+  // },
   docs: {
     type: "menu",
     title: "Documentation",

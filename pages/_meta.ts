@@ -11,6 +11,12 @@ const meta = {
   //   title: "User Guide",
   //   display: "hidden",
   // },
+  index: {
+    title: "Getting Started",
+    // Thêm redirect vào docs/v1.0.1
+    type: "page",
+    redirect: "/docs/v1.0.1/index"
+  },
   docs: {
     type: "menu",
     title: "Documentation",

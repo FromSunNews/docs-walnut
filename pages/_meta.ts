@@ -1,21 +1,25 @@
 const meta = {
   index: {
-    type: "page",
     title: "Getting Started",
-    redirect: "/docs/v1.0.1",
-    display: "hidden" 
+    type: "page"
   },
-  Architecture: {
-    title: "Architecture"
-  },
-  Blockchain: {
-    title: "Blockchain"
-  },
-  Consumer: {
-    title: "Cloud Workspace"
-  },
-  Provider: {
-    title: "Worker Workspace"
+  docs: {
+    type: "menu",
+    title: "Documentation",
+    items: {
+      "v1.0.1": {
+        title: "v1.0.1",
+        href: "/docs/v1.0.1",
+      },
+      // "v1.0.2": {
+      //   title: "v1.0.2",
+      //   href: "/docs/v1.0.2",
+      // },
+      // "v1.0.3": {
+      //   title: "v1.0.3",
+      //   href: "/docs/v1.0.3",
+      // },
+    },
   }
 };
 

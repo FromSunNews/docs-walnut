@@ -2,9 +2,6 @@ const meta = {
   index: {
     title: "Getting Stated",
   },
-  faq: {
-    title: "FAQ",
-  },
   Architecture: {
     title: "Architecture",
   },
@@ -13,6 +10,12 @@ const meta = {
   },
   Provider: {
     title: "Worker Workspace",
+  },
+  Blockchain: {
+    title: "Blockchain",
+  },
+  faq: {
+    title: "FAQ",
   },
   external: {
     title: "External Links",

@@ -81,22 +81,11 @@ const config: DocsThemeConfig = {
     return (
       <div className="flex flex-row items-center">
         <Link
-          href="/"
+          href={APP_CONFIG.original}
           className="hidden sm:flex items-center text-current no-underline hover:opacity-75 ltr:mr-auto rtl:ml-auto"
         >
-          {/* <div className="flex items-center relative">
-            <SparklesText
-              text="WA"
-              sparklesCount={4}
-              className='text-xl font-extrabold text-blue-400'
-              colors={{ first: '#A855F7', second: '#A855F7' }}
-            />
-            <Image src={APP_CONFIG.logo} alt="logo" width={20} height={20} />
-            <span className="text-xl font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
-              NET
-            </span>
-          </div> */}
-          <Image src={APP_CONFIG.logo} alt="logo" width={35} height={35} />
+          <Image src={APP_CONFIG.logo} alt={APP_CONFIG.name} width={32} height={32} />
+          <span className="text-lg font-medium">{APP_CONFIG.name}</span>
         </Link>
       </div>
     );
@@ -109,9 +98,9 @@ const config: DocsThemeConfig = {
   project: {
     link: APP_CONFIG.github,
   },
-  // chat: {
-  //   link: APP_CONFIG.discord,
-  // },
+  chat: {
+    link: APP_CONFIG.discord,
+  },
   docsRepositoryBase: APP_CONFIG.github,
   footer: {
     component: (

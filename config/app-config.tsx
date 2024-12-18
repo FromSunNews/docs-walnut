@@ -10,5 +10,6 @@ export const APP_CONFIG = {
     twitter: "https://x.com/walnut_network",
     github: "https://github.com/Walnut-Network/landing-page-docs-walnut"
   },
-  versions: ['v1.0.1']
+  versions: ['v1.0.1'],
+  original: 'https://walnutnetwork.io'
 };
